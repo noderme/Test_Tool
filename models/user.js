@@ -6,6 +6,9 @@ const Schema = mongoose.Schema;
      firstname:{
         type:String
      },
+     name:{
+         type:String
+     },
      lastname:{
         type:String
      },

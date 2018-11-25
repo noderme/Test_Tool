@@ -1,5 +1,3 @@
-module.exports = function(){
-
 var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
@@ -26,6 +24,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 
+const server = require('./server')
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
@@ -42,5 +41,24 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
-return app;
-}
+const cluster = require('cluster');
+const cpuStrength = require('os').cpus().length;
+
+// if(cluster.isMaster){
+//   console.log(`Master process is ${process.pid}`)
+//   for (let process=0; process<cpuStrength;process++){
+//     cluster.fork()
+//   }
+
+//   cluster.on('exit', function(worker){
+//     cluster.fork()
+//   })
+
+// }else{
+
+
+  console.log(`Worker process is ${process.pid}`)
+  app.listen(3000)  
+// }
+
+module.exports = app;

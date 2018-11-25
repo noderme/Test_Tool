@@ -11,6 +11,10 @@ router.get('/', function(req, res, next) {
 var multer  = require('multer')
 var upload = multer({ dest: 'uploads/' })
 
+router.get('/kill', (req,res)=>{
+  process.exit()
+})
+
 router.route('/addTask')
   .post(upload.single('taskfile'), async function(req,res,next){
     TaskController.createTask(req,res);    
