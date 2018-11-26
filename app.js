@@ -58,7 +58,7 @@ const cpuStrength = require('os').cpus().length;
 
 
   console.log(`Worker process is ${process.pid}`)
-  app.listen(3000)  
+  app.listen(process.env.PORT)  
 // }
 
 module.exports = app;
