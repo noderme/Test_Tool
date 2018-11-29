@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 
 //app = require('./app')('express');
 
-const mongoURl = 'mongodb://hari:hareesh1@ds119088.mlab.com:19088/test-tool';
+const mongoURl = '';
 //const mongoURl = 'mongodb://hareesh_tate:tate_007@ds141274.mlab.com:41274/tate_noder';
 const options = {
   reconnectTries: Number.MAX_VALUE, // Never stop trying to reconnect
