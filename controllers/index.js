@@ -28,7 +28,7 @@ const task = new Task({
 const taskInfo = await  task.save();
 
 // create reusable transporter object using the default SMTP transport
-var transporter = nodemailer.createTransport('smtps://sonofkotaiah%40gmail.com:upteszdvsjcvqogt@smtp.gmail.com');
+var transporter = nodemailer.createTransport('');
 
 // setup e-mail data with unicode symbols
 var mailOptions = {
