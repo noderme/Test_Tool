@@ -55,7 +55,8 @@ const cpuStrength = require('os').cpus().length;
 //   })
 
 // }else{
-
+  require('dotenv').config()
+  
 
   console.log(`Worker process is ${process.pid}`)
   app.listen(process.env.PORT)  

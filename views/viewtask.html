@@ -19,12 +19,34 @@
 <style>
 
 body{
-    background-color:skyblue
+    background-color:cadetblue
 }
 
 </style>
 <body>
 
+    <form  class="form-group" style="border:2px solid green; width: 600px; padding-left: 10px; padding-bottom: 10px; 
+padding-top: 10px; padding-right: 10px; margin: 0px auto; background-color: yellow" method="GET"
+
+ action="/getDetails">
+
+    <h2 style="text-align: center; font-family: 'Courier New', Courier, monospace; font-size: 20;
+    background-color: teal;width: 300px; margin: 0px auto; padding-top: 10px; padding-bottom: 10px;
+    margin-top: 10px;
+    color: yellow"> You have a new task</h2>
+
+    
+    <br>
+    
+    <p style="padding: 10px; width: 500px; text-align: center; margin: 0% auto; color:black;
+     background-color: skyblue"><strong>{{content}}</strong></p>
+
+    Enter your workspace directory (Need it to automatically send to the task giver): <br>
+    <input type="text" >
+
+   <input  style="text-align: center; margin: 10px auto" type="submit"  class="btn btn-default" title="Add Task">
+   
+    </form>
 </body>
 
 </head>

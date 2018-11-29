@@ -3,17 +3,18 @@ const User = require('../models/user')
 
 exports.createUser = function(req,res){
 
-    const {name,lastname,username,password,user_type} = req.body;
+    const {name,lastname,username,password,email} = req.body;
 
     const user = new User({
         name:name,
         lastname:lastname,
         username:username,
         password:password,
+        email:email,
         user_type:user_type
     });
 
-    user.save().then(user => { res.json(user)})
+    user.save().then(user => { res.json('Share your email Id with anyone who gives you task')})
     .catch(err => console.log(err))
 }
 

@@ -5,7 +5,7 @@ const TaskController = require('../controllers')
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('welcome');
+  
 });
 
 var multer  = require('multer')
@@ -28,6 +28,7 @@ router.route('/addTask')
     TaskController.deleteAll(req,res);
   });
 
+  
 
 router.route('/signup')
   .post(async function(req,res){
@@ -48,6 +49,9 @@ router.get('/mytasks', function(req,res){
 
 const archive = require('../controllers/archiver');
 
+router.get('/getDetails', function(req,res){
+  console.log('Started')
+})
 
 router.post('/workspace', (req,res)=>{
   

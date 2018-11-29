@@ -18,7 +18,7 @@ const Schema = mongoose.Schema;
     password:{
         type:String
     },
-    user_type:{
+    email:{
         type:String
    },
    
